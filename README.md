@@ -1,2 +1,6 @@
 # Ransomware
 I have created one ransomware which is not working it just a example of how ransomware are worked how they encrypted our file and demand for some ransom.
+Just you have to copy the .VBA file to your notepad and save that file with the extension .vba 
+After somebody opens that file boom it will show you the msg you r locked and your files are encrypted and you have to enter the password to decrypt that 
+so you have to enter password which is "winteriscomming" and then you openn that file ...
+It is just for educational purpose it does not originally locked your file it just a example of how ransomware works...
