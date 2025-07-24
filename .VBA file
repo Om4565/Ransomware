@@ -1,0 +1,23 @@
+Set objShell = CreateObject("WScript.Shell")
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+
+' Get the desktop path
+strDesktop = objShell.ExpandEnvironmentStrings("%USERPROFILE%\Desktop")
+
+' STEP 1: Show the path your script is using
+WScript.Echo strDesktop
+
+' Try to create "Encrypted Files" folder on the Desktop
+If Not objFSO.FolderExists(strDesktop & "\Encrypted Files") Then
+    objFSO.CreateFolder(strDesktop & "\Encrypted Files")
+End If
+
+' Simulated ransomware message
+strPassword = InputBox("Your files have been locked!" & vbCrLf & _
+                       "To unlock them, enter the password:", "You have been hacked")
+
+If strPassword = "winteriscomming" Then
+    MsgBox "Access granted. Files unlocked!", vbInformation, "Unlocked"
+Else
+    MsgBox "Wrong password! Try again later.", vbCritical, "Access Denied"
+End If
